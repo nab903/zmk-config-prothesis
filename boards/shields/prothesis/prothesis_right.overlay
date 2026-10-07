@@ -1,0 +1,16 @@
+#include "prothesis.dtsi" // The shared dtsi file is included in the overlay
+
+&default_transform { // Offset of 6 because the left side has 6 columns
+    col-offset = <6>;
+};
+
+// Label of the kscan node in the dtsi
+&kscan0 {
+    col-gpios
+        = <&pro_micro 0 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 1 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 20 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 21 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 8 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+};

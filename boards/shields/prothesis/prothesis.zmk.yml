@@ -1,0 +1,12 @@
+file_format: "1"
+id: prothesis
+name: Prothesis
+type: shield
+url: https://github.com/nab903/prothesis
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
+siblings:
+  - prothesis_left
+  - prothesis_right
