@@ -1,6 +1,38 @@
-#include "prothesis.dtsi" // The shared dtsi file is included in the overlay
+#include "prothesis.dtsi"
 
-// Label of the kscan node in the dtsi
+/ {
+};
+
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 10)>,
+                <NRF_PSEL(SPIM_MISO, 1, 11)>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 10)>,
+                <NRF_PSEL(SPIM_MISO, 1, 11)>;
+            low-power-enable;
+        };
+    };
+};
+
+nice_view_spi: &spi0 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    cs-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
+};
+
 &kscan0 {
     col-gpios
         = <&pro_micro 19 GPIO_ACTIVE_HIGH>
@@ -10,8 +42,4 @@
         , <&pro_micro 1 GPIO_ACTIVE_HIGH>
         , <&pro_micro 0 GPIO_ACTIVE_HIGH>
         ;
-};
-
-&nice_view_spi {
-    cs-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
 };
