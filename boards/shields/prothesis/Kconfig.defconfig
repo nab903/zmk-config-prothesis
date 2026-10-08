@@ -15,3 +15,6 @@ config ZMK_SPLIT
     default y
 
 endif
+
+CONFIG_SPI=y
+CONFIG_ZMK_DISPLAY=y
