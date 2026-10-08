@@ -48,9 +48,3 @@
         // Other chosen items
     };
 };
-
-/* nice!view */
-&nice_view_spi {
-    status = "okay";
-    cs-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
-};
