@@ -15,7 +15,7 @@
 
             // -----------------------------------------------------------------
             // | TAB | Q | W | E | R | T |   | Y | U | I | O | P | ESC |
-            // | CTRL| A | S | D | F | G |   | H | J | K | L | ; | ' | GUI |
+            // | CTRL| A | S | D | F | G |   | H | J | K | L | ; | GUI |
             //       | SHFT| Z | X | C | V |   | B | N | M | , | . |
             //                    | ALT | LOW | SPC |   | ENT | RAI | BKSPC |
             // -----------------------------------------------------------------
@@ -25,8 +25,7 @@
                 &kp Y      &kp U       &kp I       &kp O       &kp P       &kp ESC
 
                 &kp LCTRL  &kp A       &kp S       &kp D       &kp F       &kp G
-                &kp H      &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
-                &kp RGUI
+                &kp H      &kp J       &kp K       &kp L       &kp SEMI    &kp RGUI
 
                 &kp LSHFT  &kp Z       &kp X       &kp C       &kp V
                 &kp B      &kp N       &kp M       &kp COMMA   &kp DOT
