@@ -45,7 +45,7 @@
             // -----------------------------------------------------------------
             // | $ | @ | & | { | } |  _  |     | / | 7 | 8 | 9 | - | % |
             // | ^ | # | | | ( | ) |  "  |     | = | 4 | 5 | 6 | + | \ |
-            // |   | ? | ! | [ | ] |  '  |     | 0 | 1 | 2 | 3 | * |
+            //     | ? | ! | [ | ] |  '  |     | 0 | 1 | 2 | 3 | * |
             //         | ALT |     | SPC |     | ENT |     | BKSPC |
             // -----------------------------------------------------------------
 
@@ -56,11 +56,11 @@
                 &kp LS(N6)   &kp LS(N3)    &kp BSLH      &kp LS(N9)    &kp LS(N0)   &kp LS(N2)
                 &kp EQUAL    &kp N4        &kp N5        &kp N6        &kp LS(EQUAL) &kp BSLH
 
-                &trans       &kp LS(FSLH)  &kp LS(N1)    &kp LBKT      &kp RBKT
+                &kp LS(FSLH) &kp EXCL      &kp LBKT      &kp RBKT      &kp SINGLE_QUOTE
                 &kp N0       &kp N1        &kp N2        &kp N3        &kp LS(N8)
 
                 &kp LALT     &trans        &kp SPACE
-                &kp RET      &trans        &kp BSPC
+                &kp RET      &studio_unlock        &kp BSPC
             >;
         };
 
